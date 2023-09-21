@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "PVLfP2JsXhftTk8QvEfo0lLfOVZciNbWA703huQmeb7WZeSiONIQQo9pxMdtjK0myCgkkNOg6Rc3nTaW6Okb/w==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SanguophageFeedRelationship\\Source\\SanguophageFeedRelationship\\SanguophageFeedRelationship.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oppon\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512"
+  ],
+  "logs": []
+}
