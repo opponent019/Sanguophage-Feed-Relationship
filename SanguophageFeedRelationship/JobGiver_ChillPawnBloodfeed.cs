@@ -51,7 +51,7 @@ namespace SanguophageFeedRelationship
 			if (victim.WouldDieFromAdditionalBloodLoss(SFR_ModSettings.minimumSeverity)) // 0.4499f default
 				return false;
 
-			if (!victim.Awake() || victim.IsForbidden(bloodfeeder) || victim.InAggroMentalState || !victim.IsColonist || victim.IsBloodfeeder())
+			if (!victim.Awake() || victim.IsForbidden(bloodfeeder) || victim.InAggroMentalState || !victim.IsColonist)
 				return false;
 
 			if (!bloodfeeder.CanReserveAndReach(victim, PathEndMode.OnCell, bloodfeeder.NormalMaxDanger(), 1, -1, null, false) ||
@@ -60,9 +60,20 @@ namespace SanguophageFeedRelationship
 
 			if ((victim.story.traits.HasTrait(SFR_DefOf.SFR_Sanguofriend) || victim.story.traits.HasTrait(SFR_DefOf.SFR_Sanguophile) || victim.relations.DirectRelationExists(PawnRelationDefOf.Lover, bloodfeeder) ||
 				victim.relations.DirectRelationExists(PawnRelationDefOf.Fiance, bloodfeeder) || victim.relations.DirectRelationExists(PawnRelationDefOf.Spouse, bloodfeeder) ||
-				(victim.relations.OpinionOf(bloodfeeder) >= SFR_ModSettings.CloseFriend_minimumOpinion)) || SFR_ModSettings.autoFeedFree == true || victim.Ideo.HasPrecept(SFR_DefOf.Bloodfeeders_Revered))
+				(victim.relations.OpinionOf(bloodfeeder) >= SFR_ModSettings.CloseFriend_minimumOpinion)) || SFR_ModSettings.autoFeedFree == true || victim.Ideo.HasPrecept(SFR_DefOf.Bloodfeeders_Revered)) 
+			{
+				if (victim.genes.HasActiveGene(GeneDefOf.Hemogenic)) 
+				{ 
+					if (ModsConfig.IsActive("vanillaracesexpanded.sanguophage")) { 
+						if (!bloodfeeder.genes.HasActiveGene(SFR_DefOf.VRE_SanguoFeeder))
+							return false;
+					} else
+						return false;
+				}
+
 				return true;
-			
+			}
+
 			return false; 
 		}
 

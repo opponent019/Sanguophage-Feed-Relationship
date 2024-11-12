@@ -61,20 +61,32 @@ namespace SanguophageFeedRelationship
             if (SFR_ModSettings.autoFeedOptionsOff)
                 return;
 
-            if (ModsConfig.BiotechActive && !pawn.Dead && !pawn.IsBloodfeeder() && (pawn.IsColonist || pawn.IsPrisoner || pawn.IsSlaveOfColony))
+            // Vanilla Races Expanded - Sanguophage mod
+            bool bloodfeederLegal = false;
+            if (pawn.genes.HasActiveGene(GeneDefOf.Hemogenic)) {
+                if (ModsConfig.IsActive("vanillaracesexpanded.sanguophage")) 
+                    bloodfeederLegal = true; 
+            } else
+                bloodfeederLegal = true;
+            //
+
+            if (ModsConfig.BiotechActive && !pawn.Dead && bloodfeederLegal && (pawn.IsColonist || pawn.IsPrisoner || pawn.IsSlaveOfColony))
             {
                 Widgets.BeginGroup(rect);
 
                 Text.Font = GameFont.Small;
-                Rect SFR_rect = new Rect(rect.width/2, rect5.yMin - 30f, rect.width, 22f);
+                //Rect SFR_rect = new Rect(rect.width/2, rect5.yMin - 30f, rect.width, 22f);
+                Rect SFR_rect = new Rect((rect.width / 2) + 10f, rect5.yMin - 30f, (rect.width / 2) - 10f, 30f);
 
                 SFR_AutoFeeders gc = Current.Game.GetComponent<SFR_AutoFeeders>();
-                bool boo = gc.GetAutoFeed(pawn.thingIDNumber); 
-                Widgets.CheckboxLabeled(SFR_rect, "Auto feed bloodfeeders?", ref boo, false, null, null, true);
+                bool boo = gc.GetAutoFeed(pawn.thingIDNumber);
+
+                //Widgets.CheckboxLabeled(SFR_rect, "Auto feed bloodfeeders?", ref boo, false, null, null, true);
+                Widgets.CheckboxLabeled(SFR_rect, "Auto feed bloodfeeders?", ref boo, false);
                 gc.SetAutoFeed(pawn, boo);
                   
                 Widgets.EndGroup();
-            }
+            } 
         }
 
     }

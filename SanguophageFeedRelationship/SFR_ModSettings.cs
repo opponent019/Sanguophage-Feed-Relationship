@@ -119,7 +119,7 @@ namespace SanguophageFeedRelationship
 
             s = SFR_ModSettings.minimumSeverity.ToString();
             ls.TextFieldNumericLabeled("Hediff severity threshold for auto-biting victim: ", ref SFR_ModSettings.minimumSeverity, ref s);
-            ls.Label("From 0 to 1, 0 being certain death, higher numbers being safer.");
+            ls.Label("From 0 to 1. I like to play with 0.5, 0.6 doesn't trigger a bite with baseline pawns.");
             ls.Gap(2f);
 
             s = "If this is on then bloodfeeders will feed off any pawn that has the Auto-Feed toggle on regardless of social consequences.";
@@ -301,8 +301,14 @@ namespace SanguophageFeedRelationship
 
         public static PreceptDef Bloodfeeders_Revered;
 
+
+        public static GeneDef VRE_SanguoFeeder; // Vanilla Races Expanded - Sanguophage
+
         static SFR_DefOf()
         {
+            if (ModsConfig.IsActive("vanillaracesexpanded.sanguophage")) 
+                VRE_SanguoFeeder = DefDatabase<GeneDef>.GetNamed("VRE_SanguoFeeder");
+
             DefOfHelper.EnsureInitializedInCtor(typeof(SFR_DefOf));
         }
     }
