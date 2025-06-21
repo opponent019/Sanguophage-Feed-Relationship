@@ -64,8 +64,8 @@ namespace SanguophageFeedRelationship
 			{
 				if (victim.genes.HasActiveGene(GeneDefOf.Hemogenic)) 
 				{ 
-					if (ModsConfig.IsActive("vanillaracesexpanded.sanguophage")) { 
-						if (!bloodfeeder.genes.HasActiveGene(SFR_DefOf.VRE_SanguoFeeder))
+					if (ModsConfig.IsActive("vanillaracesexpanded.sanguophage")) {
+						if (!bloodfeeder.genes.HasActiveGene(DefDatabase<GeneDef>.GetNamed("VRE_SanguoFeeder")))
 							return false;
 					} else
 						return false;

@@ -58,7 +58,7 @@ namespace SanguophageFeedRelationship
 
         public static void AddAutoFeedToggle (Rect rect5, Rect rect, Pawn pawn)
         {
-            if (SFR_ModSettings.autoFeedOptionsOff)
+            if (SFR_ModSettings.autoFeedOptionsOff || pawn.IsAnimal)
                 return;
 
             // Vanilla Races Expanded - Sanguophage mod

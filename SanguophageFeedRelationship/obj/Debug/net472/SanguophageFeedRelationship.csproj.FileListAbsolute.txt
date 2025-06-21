@@ -25,3 +25,5 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelat
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\Source\SanguophageFeedRelationship\obj\Debug\net472\SanguophageFeedRelationship.pdb
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\v1.5\Assemblies\net472\SanguophageFeedRelationship.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\v1.5\Assemblies\net472\SanguophageFeedRelationship.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\v1.6\Assemblies\net472\SanguophageFeedRelationship.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\v1.6\Assemblies\net472\SanguophageFeedRelationship.pdb

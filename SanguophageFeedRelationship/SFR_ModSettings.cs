@@ -302,12 +302,15 @@ namespace SanguophageFeedRelationship
         public static PreceptDef Bloodfeeders_Revered;
 
 
-        public static GeneDef VRE_SanguoFeeder; // Vanilla Races Expanded - Sanguophage
+        //public static GeneDef VRE_SanguoFeeder = null; // Vanilla Races Expanded - Sanguophage
 
         static SFR_DefOf()
         {
-            if (ModsConfig.IsActive("vanillaracesexpanded.sanguophage")) 
-                VRE_SanguoFeeder = DefDatabase<GeneDef>.GetNamed("VRE_SanguoFeeder");
+            /*if (ModsConfig.IsActive("vanillaracesexpanded.sanguophage")) {
+                Log.Message("vre is active");
+                VRE_SanguoFeeder = DefDatabase<GeneDef>.GetNamed("VRE_SanguoFeeder"); }
+            else
+                Log.Message("vre is not active");*/
 
             DefOfHelper.EnsureInitializedInCtor(typeof(SFR_DefOf));
         }
