@@ -1,0 +1,10 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\Source\SanguophageFeedRelationship\obj\1.5\net472\SanguophageFeedRelationship.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\Source\SanguophageFeedRelationship\obj\1.5\net472\SanguophageFeedRelationship.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\Source\SanguophageFeedRelationship\obj\1.5\net472\SanguophageFeedRelationship.AssemblyInfoInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\Source\SanguophageFeedRelationship\obj\1.5\net472\SanguophageFeedRelationship.AssemblyInfo.cs
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\Source\SanguophageFeedRelationship\obj\1.5\net472\SanguophageFeedRelationship.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\Source\SanguophageFeedRelationship\obj\1.5\net472\SanguophageFeedRelationship.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\Source\SanguophageFeedRelationship\obj\1.5\net472\SanguophageFeedRelationship.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\Source\SanguophageFeedRelationship\obj\1.5\net472\SanguophageFeedRelationship.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\v1.5\Assemblies\net472\SanguophageFeedRelationship.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\v1.5\Assemblies\net472\SanguophageFeedRelationship.pdb

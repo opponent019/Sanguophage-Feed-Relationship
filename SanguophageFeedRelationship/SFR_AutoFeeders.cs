@@ -13,8 +13,6 @@ namespace SanguophageFeedRelationship
         public SFR_AutoFeeders(Game g):base() {
             autoFeederPawns = new HashSet<int>();
         }
-        //public SFR_AutoFeeders() { }
-        
 
         public void SetAutoFeed(Pawn pawn, bool included)
         {
@@ -55,45 +53,11 @@ namespace SanguophageFeedRelationship
                 if (autoFeederPawns == null)
                     autoFeederPawns = new HashSet<int>();
 
-                /*if (autoFeeders == null)
-                    autoFeeders = new HashSet<Pawn>();
-
-                Scribe_Collections.Look(ref autoFeeders, "autoFeederPawns", LookMode.Reference); // bring in the old list
-                Log.Message("SFR old list: " + autoFeeders.Count.ToString());
-
-                if (!autoFeeders.EnumerableNullOrEmpty()) // if there were any saved
-                {
-                    foreach (Pawn pawn in autoFeeders)
-                    {
-                        int pID = pawn.thingIDNumber;
-                        if (autoFeederPawns.Contains(pID))  // and they were already in the new list, remove them
-                        {
-                            autoFeeders.Remove(pawn);
-                        }
-                        else                              // if they weren't in the new list add them, and remove from the old list
-                        {
-                            autoFeederPawns.Add(pID);
-                            autoFeeders.Remove(pawn);
-                        }
-                    }
-                    Log.Message("Updated SFR old list: " + autoFeeders.Count.ToString());
-                    Log.Message("Updated SFR new list: " + autoFeederPawns.Count.ToString());
-                }*/
             }
 
 
-            //Log.Message("autoFeeders list was null so created a new list");
-            
-
             //Log.Message("EXPOSE DATA List count: " + autoFeeders.Count.ToString() + "  " + Scribe.mode.ToString());
             Scribe_Collections.Look(ref autoFeederPawns, "autoFeederPawnsIDs", LookMode.Value);
-            //Log.Message("SFR new list: " + autoFeederPawns.Count.ToString());
-
-            /*if (Scribe.mode == LoadSaveMode.Saving)
-            {
-                Scribe_Collections.Look(ref autoFeeders, "autoFeederPawns", LookMode.Reference);
-                Log.Message("SFR old list: " + autoFeeders.Count.ToString());
-            }*/
 
         }
 

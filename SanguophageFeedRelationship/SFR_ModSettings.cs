@@ -306,11 +306,8 @@ namespace SanguophageFeedRelationship
 
         static SFR_DefOf()
         {
-            /*if (ModsConfig.IsActive("vanillaracesexpanded.sanguophage")) {
-                Log.Message("vre is active");
-                VRE_SanguoFeeder = DefDatabase<GeneDef>.GetNamed("VRE_SanguoFeeder"); }
-            else
-                Log.Message("vre is not active");*/
+            //if (ModsConfig.IsActive("vanillaracesexpanded.sanguophage")) 
+            //    VRE_SanguoFeeder = DefDatabase<GeneDef>.GetNamed("VRE_SanguoFeeder"); 
 
             DefOfHelper.EnsureInitializedInCtor(typeof(SFR_DefOf));
         }

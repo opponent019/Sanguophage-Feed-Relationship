@@ -16,28 +16,6 @@ namespace SanguophageFeedRelationship
         }
 
 
-        /*public static void Postfix(Rect rect, Pawn pawn)
-        {
-            if (ModsConfig.BiotechActive && !pawn.Dead && !pawn.IsBloodfeeder() && (pawn.IsColonist || pawn.IsPrisoner || pawn.IsSlaveOfColony))
-            {
-                Widgets.BeginGroup(rect);
-
-                Text.Font = GameFont.Small;
-
-                //GUI.color = new Color(1f, 1f, 1f, 0.5f);
-                //GUI.color = Color.white;
-
-                //Widgets.DrawLineHorizontal(0f, rect.height - num, rect.width);
-                Rect SFR_rect = new Rect(30f, 40f, rect.width, 40f).ContractedBy(10f);
-
-                bool boo = SFR_GameComponent.GetAutoFeed(pawn);
-                Widgets.CheckboxLabeled(SFR_rect, "Auto feed sanguophiles", ref boo, false, null, null, true);
-                SFR_GameComponent.SetAutoFeed(pawn, boo);
-
-                Widgets.EndGroup();
-            }
-        }*/
-
         private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             Rect temp = new Rect(0f, 0f, 0f, 0f);
@@ -58,7 +36,7 @@ namespace SanguophageFeedRelationship
 
         public static void AddAutoFeedToggle (Rect rect5, Rect rect, Pawn pawn)
         {
-            if (SFR_ModSettings.autoFeedOptionsOff || pawn.IsAnimal)
+            if (SFR_ModSettings.autoFeedOptionsOff || !pawn.IsColonist)
                 return;
 
             // Vanilla Races Expanded - Sanguophage mod
@@ -68,7 +46,7 @@ namespace SanguophageFeedRelationship
                     bloodfeederLegal = true; 
             } else
                 bloodfeederLegal = true;
-            //
+            
 
             if (ModsConfig.BiotechActive && !pawn.Dead && bloodfeederLegal && (pawn.IsColonist || pawn.IsPrisoner || pawn.IsSlaveOfColony))
             {
@@ -84,7 +62,7 @@ namespace SanguophageFeedRelationship
                 //Widgets.CheckboxLabeled(SFR_rect, "Auto feed bloodfeeders?", ref boo, false, null, null, true);
                 Widgets.CheckboxLabeled(SFR_rect, "Auto feed bloodfeeders?", ref boo, false);
                 gc.SetAutoFeed(pawn, boo);
-                  
+                
                 Widgets.EndGroup();
             } 
         }

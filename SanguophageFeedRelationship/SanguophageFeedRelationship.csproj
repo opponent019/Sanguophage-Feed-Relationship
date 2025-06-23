@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
+    <Configurations>Debug;Release;1.5</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -12,6 +13,11 @@
 	<Optimize>false</Optimize>
 	<DefineConstants>DEBUG;TRACE</DefineConstants>
 	<GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='1.5|AnyCPU'">
+    <OutputPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\v1.5\Assemblies\</OutputPath>
+    <Optimize>false</Optimize>
   </PropertyGroup>
 
   <ItemGroup>

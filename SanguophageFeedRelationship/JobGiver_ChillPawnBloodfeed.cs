@@ -81,16 +81,6 @@ namespace SanguophageFeedRelationship
 		{
 			return (Pawn)GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, pawn.Map.mapPawns.FreeColonistsAndPrisoners, PathEndMode.OnCell,
 				 TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false, false, false), 9999f, (Thing victim) => CanFeedOnChillPawn(pawn, (Pawn)victim).Accepted, null);
-
-			/*return (Pawn)GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, pawn.Map.mapPawns.AllPawnsSpawned, PathEndMode.OnCell,
-				TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false, false, false), 9999f, validator: delegate (Thing t)
-                {
-					Pawn victim = t as Pawn;
-					bool b = CanFeedOnChillPawn(pawn, victim).Accepted;
-					Log.Message("Getting auto feeder in FindChillPawn " + pawn.Name + " " + b);
-
-					return b;
-				}, null); */
 		}
 	} 
 }
