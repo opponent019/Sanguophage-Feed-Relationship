@@ -1,3 +1,8 @@
 is_global = true
 build_property.RootNamespace = SanguophageFeedRelationship
-build_property.ProjectDir = C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SanguophageFeedRelationship\Source\SanguophageFeedRelationship\
+build_property.ProjectDir = /home/erika/Dev/Rimworld mods/Sanguophage-Feed-Relationship/Source/SanguophageFeedRelationship/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

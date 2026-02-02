@@ -20,10 +20,10 @@ namespace SanguophageFeedRelationship
 			{
 				return false;
 			}
-			if (!other.genes.HasGene(DefDatabase<GeneDef>.GetNamed("Bloodfeeder")))
-			{
-				return false;
-			}
+			//if (!other.genes.HasGene(DefDatabase<GeneDef>.GetNamed("Bloodfeeder")))
+			//{
+			//	return false;
+			//}
 			return true;
 		}
 	}
